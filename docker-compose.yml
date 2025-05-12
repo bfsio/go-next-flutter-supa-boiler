@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  db:
+    build:
+      context: .
+      dockerfile: docker/postgres/Dockerfile
+    container_name: petrock_db
+    restart: always
+    environment:
+      POSTGRES_DB: petrock_test
+      POSTGRES_USER: petrock
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
