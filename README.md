@@ -1,2 +1,2 @@
-# inf-svc
-# go-next-flutter-supa-boiler
+# Go NextJS Flutter Boilerplate
+
